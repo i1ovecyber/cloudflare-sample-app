@@ -8,7 +8,7 @@ import {
   InteractionType,
   verifyKey,
 } from 'discord-interactions';
-import { REVIVE_COMMAND, TEST_COMMAND } from './commands.js';
+import { DEEZNUTS_COMMAND, TEST_COMMAND } from './commands.js';
 
 class JsonResponse extends Response {
   constructor(body, init) {
@@ -52,28 +52,16 @@ router.post('/', async (request, env) => {
   if (message.type === InteractionType.APPLICATION_COMMAND) {
     // Most user commands will come as `APPLICATION_COMMAND`.
     switch (message.data.name.toLowerCase()) {
-      case REVIVE_COMMAND.name.toLowerCase(): {
-        if (message.member.roles.includes('909724765026148402')) {
-          console.log('handling revive request');
-          return new JsonResponse({
-            type: 4,
-            data: {
-              content:
-                "Hey there <@&879527848573042738> squad, it's time to make the chat active!",
-              allowed_mentions: {
-                roles: ['879527848573042738'],
-              },
-            },
-          });
-        }
+      case DEEZNUTS_COMMAND.name.toLowerCase(): {
+        console.log('handling revive request');
         return new JsonResponse({
           type: 4,
           data: {
             content:
-              'You do not have the correct role necessary to perform this action. If you believe this is an error, please contact CyberFlame United#0001 (<@218977195375329281>).',
-            flags: 64,
+              "deez nuts haha cyber L^2 + 3.14 / -3 + 2",
           },
         });
+        
       }
       case TEST_COMMAND.name.toLowerCase(): {
         return new JsonResponse({

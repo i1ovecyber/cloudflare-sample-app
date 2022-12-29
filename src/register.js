@@ -1,4 +1,4 @@
-import { REVIVE_COMMAND, TEST_COMMAND } from './commands.js';
+import { DEEZNUTS_COMMAND, TEST_COMMAND } from './commands.js';
 import fetch from 'node-fetch';
 
 /**
@@ -64,7 +64,7 @@ async function registerCommands(url) {
       Authorization: `Bot ${token}`,
     },
     method: 'PUT',
-    body: JSON.stringify([REVIVE_COMMAND, TEST_COMMAND]),
+    body: JSON.stringify([DEEZNUTS_COMMAND, TEST_COMMAND]),
   });
 
   if (response.ok) {

@@ -3,13 +3,13 @@
  * and registration.
  */
 
-export const REVIVE_COMMAND = {
+export const DEEZNUTS_COMMAND = {
   name: 'revive',
   description:
-    'Revival ping command, executable by members of the Promotions Team',
+    'deez nuts haha rare funny cyber W',
 };
 
 export const TEST_COMMAND = {
   name: 'test',
-  description: 'This command serves no purpose.',
+  description: 'This command serves no purpose. Like Emi. Cyber says this is not true.',
 };
